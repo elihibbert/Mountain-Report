@@ -1,15 +1,18 @@
-#Function under the mountain forecast file which records the highest and lowest temperatures for the location.
-
-
-
-#Import libraries
-import re
-
 
 
 
 #Function to find highest temperature in forecast
 def find_high_temp(data):
+    '''
+    This function reports the high and low temperatures for the given location for the week.
+    Data is pulled from the National Weather Service (NWS) API for the given location.
+    Inputs include the NWS data (expected in JSON format).
+    Outputs include the high temperature (in fahrenheit) and date for the week along with the low temp and date.
+    '''
+
+    #Import libraries
+    import re
+
     #initiate temperatures list
     temperatures = []
 
