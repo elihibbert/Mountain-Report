@@ -1,13 +1,17 @@
-#Function under the mountain forecast file which records the precipitation forecasted.
-
-
-#Import libraries
-import re
-
 
 
 #This function will check for precipitation and report it
 def precipitation(data):
+    '''
+    This function will parse through the National Weather Service data (Imported as a JSON using the weather_data function).
+    Any precipitation above the hardcoded threshhold will be reported when the mountain forecast master-function is run.
+    This function is nested beneath the weather_data function.
+    Inputs include the JSON data from the NWS.
+    Outputs include the threshhold for precipitation requested and the precipitation report.
+    '''
+
+    #Import libraries
+    import re   
     
     #Find length of forecast
     forecast_length = len(data['properties']['periods'])
