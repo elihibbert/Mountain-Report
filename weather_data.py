@@ -1,17 +1,18 @@
-#Function under the mountain forecast file which pulls national weather service data for the given location.
 
 
 
-
-#Import Libraries
-import requests
-import sys 
-
-
-
-#Function to import raw data for the forecast from national weather service. 
-#Input resorts variable which defines what weather report to use.
 def weather_data(resorts):
+    '''
+    This function is nested beneath the mountain forecast function. The returned data is used in the weather_data and precipitation functions.
+    This is a function to import raw data in a JSON for the forecast from the national weather service (NWS).
+    The inputs for this function include a resorts variable which is how the user informs the program of which forecast is desired.
+    The resort input by the user must be found within the resort locations dictionary.
+    The outputs include all forecast data pulled from the NWS API for the given resort.
+    '''
+
+    #Import Libraries
+    import requests
+    import sys 
 
     #All the possible resorts hardcoded into the program
     resort_locations = [{"resort": "snoqualmie pass", "resort lat": "47.4266", "resort lon": "-121.4154"},
